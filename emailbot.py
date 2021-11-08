@@ -24,6 +24,7 @@ def send_email(recipient, subject, body):
     server.quit()
 
 
+
 # %% OCT mailing List
 fileLocation =r'C:/Users/Matt Goodwin/Documents/Github/BiophotonicsEmailBot//' #input the directory to the excel file with all the meeting details.
 #Extract the meeting details for the year
@@ -59,6 +60,7 @@ EmailBody = "Hey team,\n\nWe have a {} meeting Monday ({}/{}) in  {} at {}\nIn t
 subjectHeader = "{} Meeting {}/{}".format(group,MeetingDetails["Date"].day,MeetingDetails["Date"].month)
 #Print the email how it will look with all the formatting - any Nans mean something is missing from the template.
 print(subjectHeader + '\n\n' + EmailBody)
+
 
 #Uncomment this final line when you want to actually send the email.
 #send_email(recipients, subject=subjectHeader, body=EmailBody)
